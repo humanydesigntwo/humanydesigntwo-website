@@ -36,40 +36,42 @@ function getQuoteData() {
     details: data.get("projectDetails").trim()
   };
 }
+// ===== EMAILJS =====
 
-function buildQuoteMessage(quote) {
-  return [
-    "SOLICITUD DE COTIZACIÓN - HumanYDesignTwo",
-    "",
-    `Nombre: ${quote.name}`,
-    `Empresa: ${quote.company}`,
-    `Correo del cliente: ${quote.email}`,
-    `Servicio solicitado: ${quote.service}`,
-    "",
-    "Descripción del proyecto:",
-    quote.details
-  ].join("\n");
-}
+emailjs.init({
+  publicKey: "ZXLCxrE26pQBXTZSA"
+});
 
-// Botón para preparar un correo electrónico.
+// Botón para enviar la cotización por correo.
 if (emailButton && quoteForm && formMessage) {
-  emailButton.addEventListener("click", function () {
+  emailButton.addEventListener("click", async function () {
     const quote = getQuoteData();
     if (!quote) return;
 
-    if (BUSINESS_EMAIL === "humanydesigntwo@gmail.com") {
+    emailButton.disabled = true;
+    formMessage.textContent = "Enviando tu solicitud...";
+
+    try {
+      await emailjs.sendForm(
+        "service_x4phgwr",
+        "template_wydfl96",
+        quoteForm
+      );
+
       formMessage.textContent =
-        "humanydesigntwo@gmail.coml.";
-      return;
+        "¡Solicitud enviada correctamente! Gracias por contactar a HumanYDesignTwo.";
+
+      quoteForm.reset();
+
+    } catch (error) {
+      console.error("Error al enviar la cotización:", error);
+
+      formMessage.textContent =
+        "No se pudo enviar la solicitud. Inténtalo de nuevo o utiliza WhatsApp.";
+
+    } finally {
+      emailButton.disabled = false;
     }
-
-    const subject = encodeURIComponent(
-      `Solicitud de cotización - ${quote.service}`
-    );
-    const body = encodeURIComponent(buildQuoteMessage(quote));
-
-    window.location.href =
-      `mailto:${BUSINESS_EMAIL}?subject=${subject}&body=${body}`;
   });
 }
 
