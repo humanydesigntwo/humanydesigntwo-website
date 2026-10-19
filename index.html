@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Diseño e ingeniería industrial, fixturas, tooling, impresión 3D y soluciones para manufactura.">
+  <title>HumanYDesignTwo | Ingeniería Industrial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <a class="brand" href="#inicio">HumanYDesignTwo</a>
+    <nav aria-label="Navegación principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- PORTADA -->
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <div class="eyebrow">Diseño e ingeniería industrial</div>
+        <h1>Smart Design.<br>Better Manufacturing.</h1>
+        <p>
+          Diseñamos soluciones funcionales para manufactura.
+          Transformamos ideas en modelos, fixturas y herramientas
+          que ayudan a mejorar los procesos industriales.
+        </p>
+        <a class="button" href="#contacto">Solicitar cotización</a>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="services" id="servicios">
+      <h2 class="section-title">Nuestros servicios</h2>
+      <p class="intro">
+        Apoyo de ingeniería para proyectos industriales,
+        desde el diseño hasta la coordinación de fabricación.
+      </p>
+
+      <div class="grid">
+
+        <article class="card">
+          <img
+            src="images/diseno-3d.png"
+            alt="Diseño CAD 3D y ensambles industriales"
+            class="service-image"
+            loading="lazy"
+          >
+          <h3>Diseño 3D y ensambles</h3>
+          <p>
+            Modelado CAD en SolidWorks y desarrollo de ensambles.
+          </p>
+        </article>
+
+        <article class="card">
+          <img
+            src="images/Fixtura.png"
+            alt="Diseño de fixturas y tooling industrial"
+            class="service-image"
+            loading="lazy"
+          >
+          <h3>Fixturas y tooling</h3>
+          <p>
+            Diseño de dispositivos para posicionamiento,
+            ensamble y manufactura.
+          </p>
+        </article>
+
+        <article class="card">
+          <img
+            src="images/arneses.png"
+            alt="Arneses eléctricos para aplicaciones industriales"
+            class="service-image"
+            loading="lazy"
+          >
+          <h3>Arneses eléctricos</h3>
+          <p>
+            Coordinación de fabricación de arneses eléctricos
+            de bajo volumen mediante proveedores especializados.
+          </p>
+        </article>
+
+        <article class="card">
+          <img
+            src="images/Impresion 3D.png"
+            alt="Prototipos y componentes de impresión 3D"
+            class="service-image"
+            loading="lazy"
+          >
+          <h3>Impresión 3D</h3>
+          <p>
+            Coordinación de prototipos y piezas funcionales
+            mediante proveedores de impresión 3D.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Planos de fabricación</h3>
+          <p>
+            Documentación técnica 2D para apoyar la fabricación
+            de piezas y componentes.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Fabricación y ensamble</h3>
+          <p>
+            Coordinación con proveedores para fabricación,
+            ensamble y desarrollo de soluciones industriales.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Lean Manufacturing</h3>
+          <p>
+            Soluciones orientadas a mejorar los procesos,
+            la organización del trabajo y la eficiencia operativa.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section id="nosotros">
+      <h2 class="section-title">Sobre HumanYDesignTwo</h2>
+      <p class="intro">
+        Nuestro enfoque es desarrollar soluciones prácticas de ingeniería
+        que respondan a las necesidades de cada proyecto, con atención
+        a la funcionalidad, la fabricación y la optimización de procesos.
+      </p>
+    </section>
+
+    <!-- CONTACTO Y COTIZACIÓN -->
+    <section id="contacto" class="contact-section">
+      <div class="contact-heading">
+        <p class="eyebrow">HABLEMOS DE TU PROYECTO</p>
+        <h2>Solicita una cotización</h2>
+        <p>
+          Cuéntanos qué necesitas. Revisaremos tu solicitud para ayudarte
+          a encontrar una solución de diseño y manufactura.
+        </p>
+      </div>
+
+      <form id="quoteForm" class="quote-form">
+        <div class="form-grid">
+
+          <div class="form-field">
+            <label for="clientName">Nombre *</label>
+            <input
+              type="text"
+              id="clientName"
+              name="clientName"
+              placeholder="Tu nombre"
+              required
+            >
+          </div>
+
+          <div class="form-field">
+            <label for="company">Empresa</label>
+            <input
+              type="text"
+              id="company"
+              name="company"
+              placeholder="Nombre de tu empresa"
+            >
+          </div>
+
+          <div class="form-field">
+            <label for="clientEmail">Correo electrónico *</label>
+            <input
+              type="email"
+              id="clientEmail"
+              name="clientEmail"
+              placeholder="tu@empresa.com"
+              required
+            >
+          </div>
+
+          <div class="form-field">
+            <label for="service">Servicio que necesitas *</label>
+            <select id="service" name="service" required>
+              <option value="">Selecciona un servicio</option>
+              <option value="Diseño 3D y ensambles">Diseño 3D y ensambles</option>
+              <option value="Diseño de fixturas y tooling">Diseño de fixturas y tooling</option>
+              <option value="Planos 2D de fabricación">Planos 2D de fabricación</option>
+              <option value="Impresión 3D">Impresión 3D</option>
+              <option value="Fabricación y ensamble">Fabricación y ensamble</option>
+              <option value="Arneses eléctricos de bajo volumen">Arneses eléctricos de bajo volumen</option>
+              <option value="Soluciones Lean Manufacturing">Soluciones Lean Manufacturing</option>
+              <option value="Otro proyecto">Otro proyecto</option>
+            </select>
+          </div>
+
+          <div class="form-field full-width">
+            <label for="projectDetails">Descripción del proyecto *</label>
+            <textarea
+              id="projectDetails"
+              name="projectDetails"
+              rows="5"
+              placeholder="Describe tu necesidad, cantidad, material, fechas u otros requisitos..."
+              required
+            ></textarea>
+          </div>
+
+        </div>
+
+        <p class="form-note">
+          * Campos obligatorios. No adjuntes información confidencial
+          en este formulario.
+        </p>
+
+        <div class="contact-actions">
+          <button type="button" id="emailQuote" class="btn btn-primary">
+            Solicitar por correo
+          </button>
+
+          <button type="button" id="whatsappQuote" class="btn btn-whatsapp">
+            Continuar por WhatsApp
+          </button>
+        </div>
+
+        <p
+          id="formMessage"
+          class="form-message"
+          role="status"
+          aria-live="polite"
+        ></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> HumanYDesignTwo · Smart Design. Better Manufacturing.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
